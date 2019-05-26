@@ -1,0 +1,6 @@
+<h1> <%= @destination.name %></h1>
+<h3>"5 Most Recent Posts About This Destination"</h3>
+<% @destination.posts.last(5).each do |p| %><br>
+<br>
+<li><%= link_to p.title, post_path(p) %></li><br>
+<% end %>
